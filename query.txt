@@ -1,0 +1,97 @@
+query {
+  students {
+    id
+    name
+    
+    }
+  }
+-------------------------------------------
+query GetStudentMarks($studentId: ID!) {
+  allMarks (where: { student: { id: { equals: $studentId } } }) {
+    id
+    examType
+    score
+    date
+    subject {
+      name
+      code
+    }
+  }
+}
+
+VARIABLES
+{
+  
+    "studentId": "cmhlppser0000agq9a5zeki6k"
+}
+-------------------------------------------
+
+
+query GetSubjectMarks($studentId: ID!, $subjectId: ID!) {
+  allMarks(
+    where: { 
+      student: { id: { equals: $studentId } },
+      subject: { id: { equals: $subjectId } }
+    }
+  ) {
+    score
+    examType
+    date
+  }
+}
+
+VARIABLES:
+{
+  
+    "studentId": "cmhlppser0000agq9a5zeki6k",
+    "subjectId": "cmhlxcl9z0000z6pngppbw1iv"
+}
+-------------------------------------------
+
+query Getdepartment($studentId: ID!, $where: StudentWhereUniqueInput!) {
+  student(where: $where) {
+    department {
+      id
+      name
+    }
+  }
+}
+
+VARIABLES:
+{
+  "where": {
+    studentId : "cmhlppser0000agq9a5zeki6k"
+  }
+}
+-------------------------------------------
+
+
+MUTATION:
+
+mutation CreateDepartment {
+  createDepartment(data: {
+    name: "Computer Science"
+  }) {
+    id
+    name
+  }
+}
+-------------------------------------------
+
+mutation CreateStudent {
+  createStudent(data: {
+    name: "Jeba Prakash"
+    
+    rollNumber: "CS001"
+    department: { connect: { id: "cmhlp7q1x0001gl4jr9ys0fdr" } }
+  }) {
+    id
+    name
+    rollNumber
+    department {
+      id
+      name
+    }
+  }
+}
+-------------------------------------------
