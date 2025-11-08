@@ -26,3 +26,5 @@ This project allows managing Students, Teachers, Departments, Subjects, Marks, a
 ---
 
 <img width="1917" height="928" alt="Screenshot from 2025-11-07 10-45-30" src="https://github.com/user-attachments/assets/df0a9ae1-1dc6-4a52-bb84-ba759ad7fabb" />
+<img width="1917" height="928" alt="Screenshot from 2025-11-07 10-46-20" src="https://github.com/user-attachments/assets/4d1a68d0-c181-4082-83e8-ddaa2e7c980a" />
+<img width="1917" height="928" alt="Screenshot from 2025-11-07 10-56-24" src="https://github.com/user-attachments/assets/a8020dc6-5128-44ca-bd90-ca78b0ece653" />
